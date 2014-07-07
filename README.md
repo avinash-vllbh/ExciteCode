@@ -1,0 +1,1 @@
+This repository holds the website deployment of "ExciteCode" based on rails application.
