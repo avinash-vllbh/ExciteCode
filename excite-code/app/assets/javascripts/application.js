@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+$(document).ready(function() {
+  var header_height = $("#site-header").height();
+  var padding_for_header = header_height + "px";
+  $("#main-container").css({'padding-top': padding_for_header});
+});
+
