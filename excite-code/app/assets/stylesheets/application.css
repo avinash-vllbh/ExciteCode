@@ -33,14 +33,25 @@ body {
   #site-header .container {
     text-align: center;
     vertical-align: middle;
-    min-height: 100px;
+    /*min-height: 100px;*/
     margin: auto;
-    border-bottom: solid 1px #d32626;
+  }
+  .navbar-header > a{
+    padding-top: 40px;
+    color: #fff;
+  }
+  .navbar-default .navbar-nav > li > a {
+    border-top: solid 2px #333;
+    border-bottom: solid 1px #333;
+    line-height: 30px;
+    padding-top: 30px;
   }
 }
 #site-header {
   background-color: #333;
+  height: 100px;
   margin-bottom: 0px;
+  border-bottom: solid 1px #d32626;
 }
 .navbar-default .navbar-nav > li > a {
   color: #fff;
@@ -64,6 +75,27 @@ body {
 .form-inline .form-control {
   min-width: 200px;
 }
+.dropdown-menu {
+  background-color: #333;
+  color: #fff;
+}
+.dropdown-menu > li > a {
+  line-height: 30px;
+  color: #fff;
+}
+.dropdown-menu > li > a:hover {
+  background-color: #d32626;
+  color: #fff;
+}
+
+/*Main Container*/
+
+#main-container {
+  padding-bottom: 60px;
+}
+#side-bar {
+  margin-top: 20px;
+}
 
 /*Custom CSS for site-footer*/
 #site-footer {
@@ -73,4 +105,8 @@ body {
   border-top: solid 1px #d32626;
   text-align: center;
   vertical-align: middle;
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  width: 100%;
 }

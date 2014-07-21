@@ -21,3 +21,21 @@ $(document).ready(function() {
   $("#main-container").css({'padding-top': padding_for_header});
 });
 
+// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
+$(document).ready(function() {
+  var screen_width = $( window ).width();
+  $(window).resize(function() {
+    screen_width = $( window ).width();
+  });
+  $('#site-header ul.nav li.dropdown').hover(function() {
+      if(screen_width > 768) {
+        $(this).find('.dropdown-menu').stop(true, true).delay(80).slideDown();
+      }
+    }, function() {
+      if(screen_width > 768) {
+        $(this).find('.dropdown-menu').stop(true, true).delay(80).slideUp();
+      }
+    }
+  );
+});
+
