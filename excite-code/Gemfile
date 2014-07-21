@@ -49,6 +49,7 @@ gem 'debugger', group: [:development, :test]
 gem 'devise'
 gem 'pg'
 gem 'cpalette'
+gem 'will_paginate', '~> 3.0'
 
 group :development do
   gem 'better_errors'

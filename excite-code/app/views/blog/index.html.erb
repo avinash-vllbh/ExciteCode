@@ -1,0 +1,12 @@
+<% @blogs.each do |blog| %>
+  <div class = "blog-post-section row">
+    <div class = "col-md-1 blog-date-section">
+      <%= blog["created_at"].to_date.to_formatted_s(:rfc822).upcase %>
+    </div>
+    <div class = "col-md-8 blog-content-section">
+      <h3><%= blog["title"] %></h3>
+      <p><%= blog["body"] %></p>
+    </div>
+  </div>
+<% end %>
+<%= will_paginate @blogs %>
