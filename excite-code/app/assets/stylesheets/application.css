@@ -31,7 +31,7 @@ html, body {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.35em;
   line-height: 1.6em;
 }
 #main-wrapper {
@@ -53,6 +53,7 @@ body {
     border-bottom: solid 1px #333;
     line-height: 30px;
     padding-top: 20px;
+    padding-bottom: 22px;
   }
 }
 #site-header {
@@ -65,7 +66,7 @@ body {
   color: #fff;
 }
 .navbar-default .navbar-nav > li > a:hover {
-  border-top: solid 2px #d32626;
+  border-top: solid 6px #d32626;
   border-bottom: solid 1px #d32626;
   color: #d32626;
 }
@@ -107,6 +108,8 @@ body {
 /*CSS for side bar*/
 #side-bar {
   margin-top: 20px;
+  border-left: solid 1px #DDD;
+  min-height: 300px;
 }
 
 /*CSS for Blogs*/
@@ -120,7 +123,10 @@ body {
   background-color: #d32626;
   color: #fff;
 }
-
+.blog-closing-section {
+  border-top: solid 1px #DDD;
+  border-bottom: solid 1px #DDD;
+}
 /*Custom CSS for site-footer*/
 #site-footer {
   background-color: #444;

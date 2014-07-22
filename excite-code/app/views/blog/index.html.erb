@@ -6,6 +6,9 @@
     <div class = "col-md-8 blog-content-section">
       <h3><%= blog["title"] %></h3>
       <p><%= blog["body"] %></p>
+      <div class = "blog-closing-section">
+        Categories: <%= %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog["comments"]})comments" %>
+      </div>
     </div>
   </div>
 <% end %>
