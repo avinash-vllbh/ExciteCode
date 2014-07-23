@@ -5,6 +5,7 @@ class BlogController < ApplicationController
   end
   def new
     @blog = Blog.new
+    @categories = Categories.pluck(:name, :id)
   end
   def create
     @blog = Blog.new(article_params)

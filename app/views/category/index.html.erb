@@ -1,0 +1,17 @@
+<h2>List of categories that blogs can be put in </h2>
+<table class = "table">
+  <thead>
+    <tr>
+    <td>ID</td>
+    <td>Name</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @categories.each do |category| %>
+    <tr>
+    <td><%= category["id"] %></td>
+    <td><%= category["name"] %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
