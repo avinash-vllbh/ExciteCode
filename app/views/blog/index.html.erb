@@ -18,7 +18,7 @@
       <p><%= blog["body"] %></p>
       <div class = "blog-closing-section">
         <!-- Categories: <%= @categories.where(:id => blog["category_id"]).pluck(:name).join(",") %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog["comments"]})comments" %> -->
-        Categories: <%= blog.category["name"] %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog["comments"]})comments" %>
+        Categories: <%= blog.category["name"] %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog.comments.count})comments", blog_comments_path(blog.id) %>
       </div>
     </div>
   </div>
