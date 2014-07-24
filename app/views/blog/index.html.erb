@@ -1,3 +1,13 @@
+<% content_for :side_bar do %>
+  <h3>Categories</h3>
+  <table class= "table">
+  <tbody>
+    <% @categories.each do |category| %>
+    <tr><td><%= category["name"] %></td></tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
 <% @blogs.each do |blog| %>
   <div class = "blog-post-section row">
     <div class = "col-md-1 blog-date-section">
@@ -7,7 +17,8 @@
       <h3><%= blog["title"] %></h3>
       <p><%= blog["body"] %></p>
       <div class = "blog-closing-section">
-        Categories: <%= %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog["comments"]})comments" %>
+        <!-- Categories: <%= @categories.where(:id => blog["category_id"]).pluck(:name).join(",") %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog["comments"]})comments" %> -->
+        Categories: <%= blog.category["name"] %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog["comments"]})comments" %>
       </div>
     </div>
   </div>

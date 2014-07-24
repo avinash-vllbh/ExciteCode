@@ -7,8 +7,13 @@ class CategoriesController < ApplicationController
   end
   def create
     @category = Category.new(category_params)
-    @category.save
-    redirect_to blog_index_path
+    if @category.save
+      redirect_to blog_index_path
+    else
+      flash[:alert] = "Invalid name for category"
+      redirect_to new_category_path
+      # redirect_to :back
+    end
   end
   def show
 

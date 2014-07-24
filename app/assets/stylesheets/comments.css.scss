@@ -1,0 +1,23 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment-wrapper {
+  border-bottom: solid 1px #DDD;
+  margin-bottom: 20px;
+}
+.comment-post-date {
+  float: right;
+  font-size: 0.9em;
+  color: #666;
+  padding-bottom: 10px;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
