@@ -104,6 +104,9 @@ body {
   padding-top: 120px;
   padding-bottom: 61px;
 }
+#main-container > a {
+  color: #d32626;
+}
 
 /*CSS for side bar*/
 #side-bar {
