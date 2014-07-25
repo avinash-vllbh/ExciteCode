@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   resources :palette
   resources :categories
 
+  get '/contact' => 'contact#contact'
+  post '/contact' => 'contact#create_contact'
+
+  # match '/contact' => 'contact#contact', via: [:get, :post]
+  # resource :contact
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

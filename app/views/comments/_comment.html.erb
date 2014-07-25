@@ -1,0 +1,12 @@
+<div class = "comment-wrapper">
+  <div class = "clearfix">
+    <strong><%= comment.posted_by %></strong>
+    <%= link_to 'Delete', [comment.blog, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+    <p style = "margin-left: 10px">
+      <%= comment.body %>
+    </p>
+    <div class = "comment-post-date"><i>-- posted on <%= comment.created_at.to_date.to_formatted_s(:rfc822) %></i></div>
+  </div>
+</div>
