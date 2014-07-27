@@ -38,14 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# using master branch for rails4 compatibility 
-gem 'activeadmin', github: 'gregbell/active_admin', branch: 'master'
-# Dependencies for active admin
-gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
-gem 'ransack', github: 'activerecord-hackery/ransack'
-gem 'formtastic', github: 'justinfrench/formtastic'
-# Use debugger
-gem 'debugger', group: [:development, :test]
 gem 'devise'
 gem 'pg'
 gem 'cpalette'
@@ -62,7 +54,6 @@ group :development do
 end
 group :development, :test do
   gem 'rspec-rails'
-  #gem 'factory_girl_rails'
   gem 'guard-rails'
 end
 group :test do
