@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  # load_and_authorize_resource
   def index
     begin
       @blog = Blog.find_by(slug: params[:blog_id])

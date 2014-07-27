@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  load_and_authorize_resource
   def index
     @categories = Category.all
   end
@@ -7,6 +8,7 @@ class CategoriesController < ApplicationController
   end
   def create
     @category = Category.new(category_params)
+    @category.slug = @category.name.downcase.gsub(" ", "-")
     if @category.save
       redirect_to blog_index_path
     else
@@ -16,7 +18,9 @@ class CategoriesController < ApplicationController
     end
   end
   def show
-    @blogs = Blog.where(category_id: params[:id]).paginate(:page => params[:page], :per_page => 5).order('id DESC').includes(:comments)
+
+    category = Category.find_by(slug: params[:id])
+    @blogs = Blog.where(category_id: category.id).paginate(:page => params[:page], :per_page => 5).order('id DESC').includes(:comments)
     @categories = Category.all
   end
   def edit

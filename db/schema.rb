@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727155726) do
+ActiveRecord::Schema.define(version: 20140727185516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,19 +23,22 @@ ActiveRecord::Schema.define(version: 20140727155726) do
     t.string   "title"
     t.text     "body"
     t.string   "keywords"
-    t.integer  "comments",   default: 0, null: false
-    t.integer  "category",   default: 0, null: false
-    t.string   "slug",                   null: false
+    t.integer  "comments",    default: 0, null: false
+    t.integer  "category_id", default: 0, null: false
+    t.string   "slug",                    null: false
   end
 
-  add_index "blogs", ["category"], name: "index_blogs_on_category", using: :btree
+  add_index "blogs", ["category_id"], name: "index_blogs_on_category", using: :btree
   add_index "blogs", ["slug"], name: "index_blogs_on_slug", using: :btree
 
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "categories", ["slug"], name: "index_categories_on_slug", using: :btree
 
   create_table "comments", force: true do |t|
     t.integer  "blog_id"
@@ -73,6 +76,7 @@ ActiveRecord::Schema.define(version: 20140727155726) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "admin"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
