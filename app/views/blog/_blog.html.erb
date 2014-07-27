@@ -1,0 +1,17 @@
+<% @blogs.each do |blog| %>
+<div class = "blog-post-section row">
+  <div class = "col-md-1 blog-date-section">
+    <%= blog["created_at"].to_date.to_formatted_s(:rfc822).upcase %>
+  </div>
+  <div class = "col-md-8 blog-content-section">
+    <div class = "blog-title-section">
+      <%= link_to "#{blog["title"]}", blog_path(blog.slug) %>
+    </div>
+    <p><%= blog["body"] %></p>
+    <div class = "blog-closing-section">
+      <!-- Categories: <%= @categories.where(:id => blog["category_id"]).pluck(:name).join(",") %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog["comments"]})comments" %> -->
+      Categories: <%= blog.category["name"] %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog.comments.count})comments", blog_comments_path(blog.slug) %>
+    </div>
+  </div>
+</div>
+<% end %>

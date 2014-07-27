@@ -1,0 +1,8 @@
+<h3>Categories</h3>
+<table class= "table">
+<tbody>
+  <% @categories.each do |category| %>
+  <tr><td><%= link_to category["name"], category_path(category.id) %></td></tr>
+  <% end %>
+  </tbody>
+</table>

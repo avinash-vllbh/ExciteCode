@@ -1,28 +1,6 @@
-<% content_for :side_bar do %>
-  <h3>Categories</h3>
-  <table class= "table">
-  <tbody>
-    <% @categories.each do |category| %>
-    <tr><td><%= category["name"] %></td></tr>
-    <% end %>
-    </tbody>
-  </table>
-<% end %>
-<% @blogs.each do |blog| %>
-  <div class = "blog-post-section row">
-    <div class = "col-md-1 blog-date-section">
-      <%= blog["created_at"].to_date.to_formatted_s(:rfc822).upcase %>
-    </div>
-    <div class = "col-md-8 blog-content-section">
-      <div class = "blog-title-section">
-        <%= link_to "#{blog["title"]}", blog_path(blog.id) %>
-      </div>
-      <p><%= blog["body"] %></p>
-      <div class = "blog-closing-section">
-        <!-- Categories: <%= @categories.where(:id => blog["category_id"]).pluck(:name).join(",") %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog["comments"]})comments" %> -->
-        Categories: <%= blog.category["name"] %> | keywords: <%= blog["keywords"] %> | <%= link_to "(#{blog.comments.count})comments", blog_comments_path(blog.id) %>
-      </div>
-    </div>
-  </div>
-<% end %>
+<%= render "blog" %>
 <%= will_paginate @blogs %>
+
+<% content_for :side_bar do %>
+  <%= render "categories/categories" %>
+<% end %>

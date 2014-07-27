@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   resources :palette
   resources :categories
 
+  get '/blog' => 'blog#index'
+  post 'blog' => 'blog#create'
+
   get '/contact' => 'contact#contact'
   post '/contact' => 'contact#create_contact'
 

@@ -16,7 +16,8 @@ class CategoriesController < ApplicationController
     end
   end
   def show
-
+    @blogs = Blog.where(category_id: params[:id]).paginate(:page => params[:page], :per_page => 5).order('id DESC').includes(:comments)
+    @categories = Category.all
   end
   def edit
 

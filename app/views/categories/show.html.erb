@@ -1,0 +1,11 @@
+<% if @blogs.empty? %>
+  <p>There are no blogs belonging to this category. Please check other categories.</p>
+  <%= link_to "Home", blog_index_path %>
+<% else %>
+  <%= render "blog/blog" %>
+<% end %>
+
+<%= will_paginate @blogs %>
+<% content_for :side_bar do %>
+  <%= render "categories" %>
+<% end %>

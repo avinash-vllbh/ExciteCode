@@ -11,6 +11,7 @@ class BlogController < ApplicationController
   end
   def create
     @blog = Blog.new(article_params)
+    @blog.slug = @blog.title.downcase.gsub(" ", "-")
     if @blog.save
       redirect_to @blog
     else 
@@ -19,13 +20,11 @@ class BlogController < ApplicationController
     end
   end
   def show
-    @blog = Blog.find(params[:id])
-    # @blog.comments
-    # raise
+    @blog = Blog.find_by(slug: params[:id])
   end
 
   private
   def article_params
-    params.require(:blog).permit(:title, :body, :keywords, :category_id)
+    params.require(:blog).permit(:title, :body, :keywords, :category_id, :slug)
   end
 end

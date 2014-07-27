@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def index
     begin
-      @blog = Blog.find(params[:blog_id])
+      @blog = Blog.find_by(slug: params[:blog_id])
       redirect_to blog_path(@blog)
     rescue ActiveRecord::RecordNotFound
       flash[:notice] = "I don't have that. Are you sure?"
@@ -9,12 +9,12 @@ class CommentsController < ApplicationController
     end
   end
   def create
-    @blog = Blog.find(params[:blog_id])
+    @blog = Blog.find_by(slug: params[:blog_id])
     @comment = @blog.comments.create(comment_params)
     redirect_to blog_path(@blog)
   end
   def destroy
-    @blog = Blog.find(params[:blog_id])
+    @blog = Blog.find_by(slug: params[:blog_id])
     @comment = @blog.comments.find(params[:id])
     @comment.destroy
     redirect_to blog_path(@blog)
