@@ -1,4 +1,4 @@
-<%= form_for @blog, :url => {:controller => 'blog', :action => 'create'}, :html => {:class => "form"} do |f| %>
+<%= form_for @blog, url: create_blog_path, :html => {:class => "form"} do |f| %>
   <div class="form-group">
     <label>Title</label>
     <%= f.text_field :title, {:class => 'form-control'} %>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :categories
 
   get '/blog' => 'blog#index'
-  post 'blog' => 'blog#create'
+  post 'blog' => 'blog#create', as: 'create_blog'
 
   get '/contact' => 'contact#contact'
   post '/contact' => 'contact#create_contact'
