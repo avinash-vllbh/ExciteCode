@@ -31,9 +31,9 @@
                   <li><%= link_to "CSV Processor" %></li>
                 </ul>
               </li>
-              <li>
+              <!-- <li>
                 <a href="../components">About Me</a>
-              </li>
+              </li> -->
               <li>
                 <%= link_to "Contact", contact_path %>
               </li>
@@ -59,6 +59,7 @@
               Signed in as <%= current_user.email %>. Not you?
               <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
             <% else %>
+              <a class = "btn btn-success" href = "https://github.com/login/oauth/authorize">Login using github</a>
               <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
             <% end %>
           </div>
@@ -66,9 +67,34 @@
       </div>
     </div>
     <footer id="site-footer">
-      <div class="container-fluid">
-        <p>&#169;ExciteCode.com</p>
+      <div class="container">
+        <div class = "row">
+          <div class = "col-md-4">
+            <span class = "title">About Me</span>
+            <p>
+              B.E, M.S, passionate about developing web applications and enriching user experience. 
+              Strong orientation towards Agile and Test Driven Development (TDD).
+            </p>
+          </div>
+          <div class = "col-md-4">
+          </div>
+          <div class = "col-md-4">
+            <span class = "title">Stay Connected</span>
+            <ul class="social-links">
+              <li class="github"><a href="#">GitHub</a></li>
+              <li class="twitter"><a href="#">Twitter</a></li>
+              <li class="facebook"><a href="#">Facebook</a></li>
+              <li class="linkedin"><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
+    <footer id = "footer-bottom">
+      <div class = "container-fluid">
+        <div class = "row">
+          <p>ExciteCode.com&#169;2014</p>
+        </div>
+      </div>
   </body>
 </html>

@@ -118,14 +118,79 @@ body {
 
 /*Custom CSS for site-footer*/
 #site-footer {
-  background-color: #444;
-  color:#fff;
+  color:#868686;
+  background-color: #3a3a3a;
   padding: 15px 0px 20px 0px;
   border-top: solid 1px #d32626;
-  text-align: center;
-  vertical-align: middle;
-  height: 60px;
-  margin-top: -60px;
   clear: both;
-  position: relative;
+  bottom: 0px;
+}
+#site-footer .title {
+  border-bottom: 1px solid #4b4b4b;
+  display: block;
+  font-size: 13px;
+  margin: 0 0 12px;
+  padding: 0 0 12px;
+}
+#site-footer > p{
+  font-size: 12px;
+}
+
+.social-links {
+  list-style: disc;
+}
+
+.social-links > li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 0 10px 15px;
+  /*text-indent: -9999px;*/
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.social-links li.twitter a {
+background-image: url(/assets/icon-twitter.png);
+background-position: 0 -15px;
+height: 15px;
+width: 21px;
+}
+.social-links li.facebook a {
+background-image: url(/assets/icon-facebook.png);
+background-position: 0 -16px;
+height: 15px;
+width: 21px;
+}
+.social-links li.linkedin a {
+background-image: url(/assets/icon-linkedin.png);
+background-position: 0 -16px;
+height: 15px;
+width: 21px;
+}
+
+.social-links a {
+  background-repeat: no-repeat;
+  background-position: 0 -16px;
+  display: block;
+  height: 16px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  width: 20px;
+}
+
+.social-links li a:hover {
+  background-position: 0 0;
+}
+
+
+#footer-bottom {
+  color:#868686;
+  background: #303030;
+  line-height: 17px;
+  padding: 12px 0;
+  text-align: center;
 }
