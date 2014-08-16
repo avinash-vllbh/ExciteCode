@@ -1,6 +1,6 @@
 class BlogController < ApplicationController
   # before_action :article_params, only: :create
-  # load_and_authorize_resource :find_by => :slug
+  load_and_authorize_resource :find_by => :slug
   # authorize_resource
   def index
     # Check with ryan on the ambiguos colon issue
