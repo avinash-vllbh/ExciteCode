@@ -10,7 +10,7 @@ class Ability
     else
       cannot [:create, :update, :destroy], Blog
       can :read, Blog, :published => true
-      can :manage, Comment
+      can :manage, Comment, :user_id => user.id
       can :read, [Blog, Category, Comment]
     end
   end
