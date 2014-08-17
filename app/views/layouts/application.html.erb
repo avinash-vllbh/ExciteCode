@@ -17,23 +17,23 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a href="../" class="navbar-brand">ExciteCode</a>
+            <%= link_to root_path do %>
+              <span class = "site-logo"><strong>ExciteCode</strong></span>
+            <% end %>
+            <!-- <a href="../" class="navbar-brand">ExciteCode</a> -->
           </div>
           <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-              <li>
-                <%= link_to "Blog", blog_index_path %>
-              </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contributions<span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Open Source&nbsp;<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><%= link_to "Color Palette", palette_index_path %></li>
                   <li><%= link_to "CSV Processor" %></li>
                 </ul>
               </li>
-              <!-- <li>
-                <a href="../components">About Me</a>
-              </li> -->
+              <li>
+                <%= link_to "Blog", blog_index_path %>
+              </li>
               <li>
                 <%= link_to "Contact", contact_path %>
               </li>
@@ -41,6 +41,7 @@
           </nav>
         </div>
       </header>
+
       <div id = "main-container" class = "container">
         <div class = "row">
           <div class = "col-md-9">
@@ -52,18 +53,22 @@
             <% end %>
             <%= yield %>
           </div>
-        <div class = "col-md-3" id = "side-bar">
-          <%= yield :side_bar %>
-          <div id="user_nav">
-            <% if user_signed_in? %>
-              Signed in as <%= current_user.name %>. Not you?
-              <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-            <% else %>
-              <%= link_to "Sign in with github", user_omniauth_authorize_path(:github) %>
-              <!-- <a class = "btn btn-success" href = "https://github.com/login/oauth/authorize">Login using github</a> -->
-              <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-            <% end %>
-          </div>
+          <div class = "col-md-3 side-wrapper">
+            <div id="user_nav">
+              <% if user_signed_in? %>
+                Signed in as <strong><%= current_user.name %></strong>. 
+                <br>Not you?
+                <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+              <% else %>
+                <%= link_to(user_omniauth_authorize_path(:github), :class => "btn btn-default") do %>
+                  <i class="fa fa-github fa-2x" style = "vertical-align: middle;"></i>&nbsp;Sign in with github
+                <% end %>
+              <% end %>
+            </div>
+            <div id = "side-bar">
+              <%= yield :side_bar %>
+            </div>
+          </div>  
         </div>
       </div>
     </div>
@@ -82,10 +87,11 @@
           <div class = "col-md-4">
             <span class = "title">Stay Connected</span>
             <ul class="social-links">
-              <li class="github"><a href="#">GitHub</a></li>
-              <li class="twitter"><a href="#">Twitter</a></li>
-              <li class="facebook"><a href="#">Facebook</a></li>
-              <li class="linkedin"><a href="#">LinkedIn</a></li>
+
+              <li class="github"><a href="https://github.com/avinash-vllbh", target = blank >GitHub</a></li>
+              <li class="twitter"><a href="https://twitter.com/avinash_vllbh", target = blank >Twitter</a></li>
+              <li class="facebook"><a href="https://www.facebook.com/avinash.vallabhaneni", target = blank>Facebook</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/pub/avinash-vallabhaneni/55/979/a19", target = blank>LinkedIn</a></li>
             </ul>
           </div>
         </div>
@@ -94,7 +100,7 @@
     <footer id = "footer-bottom">
       <div class = "container-fluid">
         <div class = "row">
-          <p>ExciteCode.com&#169;2014</p>
+          ExciteCode.com&#169;2014
         </div>
       </div>
   </body>

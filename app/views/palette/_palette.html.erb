@@ -1,0 +1,31 @@
+<h2>Color Palette</h2>
+<p> Simple ruby gem for generating a palette of colors. </p>
+<p> what can it do ? </p>
+<ul class="list-group" style = "list-style-type: none;">
+  <li><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp; Generates any random colors </li>
+  <li><span class='glyphicon glyphicon-ok'></span>&nbsp;&nbsp;  Gives you Hex codes </li>
+  <li><span class='glyphicon glyphicon-ok'></span>&nbsp;&nbsp;  Gives you RGB or HSL if you need them </li>
+</ul>
+<h3>View Demo</h3>
+<%= form_tag({:controller => "palette", :method => :get},{:class => "form-inline"}) do%>
+  <div class="form-group">
+    <label class="sr-only" for="colors">Number of colors</label>
+    <%=  select_tag :colors, options_for_select((1..10), locals[:num_colors]) , :class => 'form-control'%>
+  </div>
+  <%= button_tag "Update Palette", :class => 'btn btn-primary' %>
+<% end %>
+</br></br>
+<% count = 1 %>
+<% @colors.count <= 6 ? percent = 30 : percent = 25 %>
+<% @colors.count <= 6 ? height = 300 : height = 450 %>
+<div style = "max-height:<%= height %>px;">
+  <% @colors.each do |color|%>
+    <div class = "color" id = "palette<%= count %>" style=" display: inline-block; width : <%= percent %>% ; height: 150px; background-color: <%= color['hex'] %>" ></div>
+    <div class = "colorInfo" id = "paletteInfo<%= count %>" style = "display: none; vertical-align: bottom; text-align: center; width : <%= percent %>% ; height: 150px;">
+        <span class = "color-info">Hex value: <%= color["hex"] %></span><br>
+        <span class = "color-info">RGB value: <%= color["rgb"] %></span><br>
+        <span class = "color-info">HSL Value: <%= color["hsl"] %></span><br>
+    </div>
+    <% count = count + 1 %>
+  <% end %>
+</div>

@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require bootstrap
+ *= require font-awesome
  *= require_self
  */
 
@@ -23,6 +24,14 @@ src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-ope
 url('/assets/glyphicons-halflings-regular.woff') format('woff'),
 url('/assets/glyphicons-halflings-regular.ttf') format('truetype'),
 url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+
+font-family: 'FontAwesome';
+    src: url('fontawesome-webfont.eot');
+    src: url('fontawesome-webfont.eot?#iefix') format('embedded-opentype'), 
+         url('fontawesome-webfont.woff') format('woff'), 
+         url('fontawesome-webfont.ttf') format('truetype'), 
+         url('fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), 
+         url('fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
 }
 
 html, body {
@@ -34,6 +43,24 @@ body {
   font-size: 1.35em;
   line-height: 1.6em;
 }
+
+h2 {
+  color: #d32626;
+  margin-bottom: 32px;
+  font-size: 2.25em;
+  text-rendering: optimizelegibility;
+  line-height: 1.3em;
+  font-weight: bold;
+}
+
+h3 {
+  color: #d32626;
+  margin-bottom: 32px;
+  font-size: 1.95em;
+  text-rendering: optimizelegibility;
+  line-height: 1.3em;
+}
+
 #main-wrapper {
   min-height: 100%;
 }
@@ -55,11 +82,21 @@ body {
     padding: auto;
   }
 }
+
+.site-logo {
+  /*text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;*/
+}
 #site-header {
   background-color: #333;
   height: 50px;
   margin-bottom: 0px;
   border-bottom: solid 1px #d32626;
+}
+
+.navbar-default .navbar-nav > li {
+  padding-left: 20px;
 }
 .navbar-default .navbar-nav > li > a {
   color: #fff;
@@ -67,9 +104,6 @@ body {
 .navbar-default .navbar-nav > li > a:hover {
   background-color: #d32626;
   color: #fff;
-  /*border-top: solid 6px #d32626;
-  border-bottom: solid 1px #d32626;
-  color: #d32626;*/
 }
 .navbar-default .navbar-nav > .active > a {
   color: #fff;
@@ -109,12 +143,18 @@ body {
   color: #d32626;
 }
 
-/*CSS for side bar*/
+.side-wrapper {
+  margin-top: 20px;
+  /*border-left: solid 1px #DDD;*/
+}
 #side-bar {
   margin-top: 20px;
-  border-left: solid 1px #DDD;
+  padding-left: 5px;
   min-height: 300px;
+  background-color: #FAEDED;
+  border-top : solid 1px #d32626;
 }
+
 
 /*Custom CSS for site-footer*/
 #site-footer {
@@ -144,11 +184,30 @@ body {
   display: inline-block;
   list-style: none;
   margin: 0 0 10px 15px;
-  /*text-indent: -9999px;*/
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
+
+.social-links li.github a {
+background-image: url(/assets/icon-github.png);
+background-position: 0 0px;
+height: 20px;
+width: 20px;
+}
+
+.social-links li.github a:hover {
+background-image: url(/assets/icon-github-red.png);
+-webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+/*background-position: 0 -20px;*/
+height: 20px;
+width: 20px;
+}
+
 
 .social-links li.twitter a {
 background-image: url(/assets/icon-twitter.png);

@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :palette
-  resources :categories
+  resources :categories, param: :slug
 
   get '/blog' => 'blog#index'
   post 'blog' => 'blog#create', as: 'create_blog'

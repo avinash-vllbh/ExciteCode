@@ -14,12 +14,10 @@ class CategoriesController < ApplicationController
     else
       flash[:alert] = "Invalid name for category"
       redirect_to new_category_path
-      # redirect_to :back
     end
   end
   def show
-
-    category = Category.find_by(slug: params[:id])
+    category = Category.find_by(slug: params[:slug])
     @blogs = Blog.where(category_id: category.id).paginate(:page => params[:page], :per_page => 5).order('id DESC').includes(:comments)
     @categories = Category.all
   end

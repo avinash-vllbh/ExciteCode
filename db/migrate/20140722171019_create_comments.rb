@@ -3,7 +3,7 @@ class CreateComments < ActiveRecord::Migration
     create_table :comments do |t|
       t.references :blog, index: true
       t.text :body, null: false
-      t.string :posted_by, null: false
+      t.string :posted_by
       t.timestamps
     end
   end

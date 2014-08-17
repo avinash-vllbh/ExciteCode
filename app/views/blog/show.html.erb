@@ -6,9 +6,6 @@
     <%= @blog.body %>
   </p>
 </div>
-
-<h4>Comments</h4>
+<h4>There are <%= @blog.comments.count > 0 ? @blog.comments.count : "no"  %> Comments</h4>
 <%= render @blog.comments %>
-
-<h4>Add a comment:</h4>
 <%= render "comments/form" %>

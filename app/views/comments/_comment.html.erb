@@ -1,9 +1,15 @@
 <div class = "comment-wrapper">
   <div class = "clearfix">
-    <strong><%= comment.posted_by %></strong>
-    <%= link_to 'Delete', [comment.blog, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+    <% if comment.user_id.nil? %>
+      <span class = "title"><%= comment.posted_by %></span>
+    <% else %>
+      <span class = "title"><%= comment.user.name %></span>
+      <% end %>
+    <% if user_signed_in? %>
+      <% if comment.user_id == current_user.id %>
+        <%= link_to 'Delete', [comment.blog, comment], method: :delete, :class => "delete", :title => "delete" ,data: { confirm: 'Are you sure?' }, style: "float: right" %>
+      <% end %>
+   <% end %>
     <p style = "margin-left: 10px">
       <%= comment.body %>
     </p>

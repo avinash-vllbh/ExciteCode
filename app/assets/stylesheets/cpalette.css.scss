@@ -1,3 +1,18 @@
 // Place all the styles related to the cpalette controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+div.color {
+}
+div.colorInfo {
+  vertical-align: bottom;
+}
+.color-info {
+  border-bottom: 1px solid #DDD;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 0 12px;
+  color: #d32626;
+  padding-left: 20px;
+}

@@ -1,13 +1,15 @@
-<%= form_for [@blog, @blog.comments.build] , :html => {:class => "form"}  do |f| %>
-  <div class="form-group">
-    <label></label>
-      <%= f.text_area :body, {:class => 'form-control'} %>
-  </div>
-  <div class="form-group">
-    <label>Posted by</label>
-      <%= f.text_field :posted_by, {:class => 'form-control'} %>
-  </div>
-
+<% if user_signed_in? %>
+  <h4>Add a comment:</h4>
+  <%= form_for [@blog, @blog.comments.build] , :html => {:class => "form"}  do |f| %>
+    <div class="form-group">
+      <label></label>
+        <%= f.text_area :body, {:class => 'form-control'} %>
+    </div>
     <%= f.submit "Comment", :class => 'btn btn-danger' %>
-  </p>
+  <% end %>
+<% else  %>
+  Join the conversation! 
+  <%= link_to(user_omniauth_authorize_path(:github), :class => "btn btn-default") do %>
+    <i class="fa fa-github fa-2x" style = "vertical-align: middle;"></i>&nbsp;Sign in with github
+  <% end %>
 <% end %>

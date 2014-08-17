@@ -42,3 +42,59 @@ $(document).ready(function() {
   );
 });
 
+// $(document).ready(function() {
+//   $( "div.cpalette" )
+//   .mouseenter(function() {
+//     var id = $(this).attr('id');
+//     console.log(id);
+//     $("#"+id).css("display", "none");
+//     $("#"+id+"info").css("display", "inline-block");
+//   })
+//   // .mouseleave(function() {
+//   //   $("#paletteInfo1").css("display", "none");
+//   //   $("#palette1").css("display", "inline-block");
+//   // });
+// });
+
+// $( ".cpalette" ).hover(
+//   function() {
+//     $("#palette1").css("display", "none");
+//     $("#paletteInfo1").css("display", "inline-block");
+//   }, function() {
+//     $("#paletteInfo1").css("display", "none");
+//     $("#palette1").css("display", "inline-block");
+//   }
+// );
+// });
+
+$(document).ready(function() {
+  $("div.color").mouseenter(function() {
+    var id = $(this).attr('id').slice(-1);
+    console.log(id);
+    $("#paletteInfo"+id).show("slow").css("display", "inline-block");
+    $("#palette"+id).hide("slow");
+    // $("#palette"+id).css("display", "none");
+    // $("#paletteInfo"+id).css("display", "inline-block");
+  });
+});
+
+$(document).ready(function() {
+  $("div.colorInfo").mouseleave(function() {
+    var id = $(this).attr('id').slice(-1);
+    $("#palette"+id).show("slow").css("display", "inline-block");
+    $("#paletteInfo"+id).hide("slow");
+    // $("#paletteInfo"+id).css("display", "none");
+    // $("#palette"+id).css("display", "inline-block");
+  });
+});
+
+// var ctoggle = function(x) {
+//   $("#palette"+x).css("display", "none");
+//   $("#paletteInfo"+x).css("display", "inline-block");
+// };
+
+// var ctoggleBack = function(x) {
+//   $("#paletteInfo"+x).css("display", "none");
+//   $("#palette"+x).css("display", "inline-block");
+// };
+
