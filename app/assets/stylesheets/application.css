@@ -13,6 +13,7 @@
  *= require_tree .
  *= require bootstrap
  *= require font-awesome
+ *= require monokai_sublime
  *= require_self
  */
 
@@ -39,9 +40,9 @@ html, body {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.35em;
-  line-height: 1.6em;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-size: 1.53em;
+  line-height: 1.8em;
 }
 
 h2 {
@@ -59,6 +60,10 @@ h3 {
   font-size: 1.95em;
   text-rendering: optimizelegibility;
   line-height: 1.3em;
+}
+
+pre {
+  padding: 0px;
 }
 
 #main-wrapper {

@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require highlight.pack
 //= require_tree .
 
 
@@ -42,31 +43,6 @@ $(document).ready(function() {
   );
 });
 
-// $(document).ready(function() {
-//   $( "div.cpalette" )
-//   .mouseenter(function() {
-//     var id = $(this).attr('id');
-//     console.log(id);
-//     $("#"+id).css("display", "none");
-//     $("#"+id+"info").css("display", "inline-block");
-//   })
-//   // .mouseleave(function() {
-//   //   $("#paletteInfo1").css("display", "none");
-//   //   $("#palette1").css("display", "inline-block");
-//   // });
-// });
-
-// $( ".cpalette" ).hover(
-//   function() {
-//     $("#palette1").css("display", "none");
-//     $("#paletteInfo1").css("display", "inline-block");
-//   }, function() {
-//     $("#paletteInfo1").css("display", "none");
-//     $("#palette1").css("display", "inline-block");
-//   }
-// );
-// });
-
 $(document).ready(function() {
   $("div.color").mouseenter(function() {
     var id = $(this).attr('id').slice(-1);
@@ -88,13 +64,5 @@ $(document).ready(function() {
   });
 });
 
-// var ctoggle = function(x) {
-//   $("#palette"+x).css("display", "none");
-//   $("#paletteInfo"+x).css("display", "inline-block");
-// };
-
-// var ctoggleBack = function(x) {
-//   $("#paletteInfo"+x).css("display", "none");
-//   $("#palette"+x).css("display", "inline-block");
-// };
+hljs.initHighlightingOnLoad();
 
