@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to @project
+      redirect_to project_path(@project.slug)
     else 
       flash[:alert] = "Failed to save the project"
       redirect_to new_project_path

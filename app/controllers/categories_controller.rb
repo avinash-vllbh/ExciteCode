@@ -22,7 +22,7 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
   def edit
-
+    
   end
 
   # Don't want to destroy anything
