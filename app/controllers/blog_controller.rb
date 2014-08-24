@@ -1,7 +1,7 @@
 class BlogController < ApplicationController
-  # before_action :article_params, only: :create
-  load_and_authorize_resource :find_by => :slug
   # authorize_resource
+  load_and_authorize_resource :find_by => :slug
+  
   def index
     # Check with ryan on the ambiguos colon issue
     # @blogs = Blog.paginate(:page => params[:page], :per_page => 5).order('id DESC').eager_load(:category)
@@ -24,7 +24,6 @@ class BlogController < ApplicationController
   end
   def show
     @blog = Blog.find_by(slug: params[:id])
-    # authorize! :show, @blog
   end
 
   private

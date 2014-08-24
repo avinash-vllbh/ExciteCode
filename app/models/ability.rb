@@ -11,7 +11,7 @@ class Ability
       cannot [:create, :update, :destroy], Blog
       can :read, Blog, :published => true
       can :manage, Comment, :user_id => user.id
-      can :read, [Blog, Category, Comment]
+      can :read, [Blog, Category, Comment, Project]
     end
   end
 end

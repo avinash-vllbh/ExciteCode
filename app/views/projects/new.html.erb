@@ -1,0 +1,12 @@
+<% if @project.errors.any? %>
+  <div class="alert-danger">
+    <ul>
+    <% @project.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<h2>Add a new project</h2>
+
+  <%= render "form" %>

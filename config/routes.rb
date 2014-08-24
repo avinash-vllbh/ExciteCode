@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   get '/contact' => 'contact#contact'
   post '/contact' => 'contact#create_contact'
 
+  resources :projects, param: :slug
+
   # match '/contact' => 'contact#contact', via: [:get, :post]
   # resource :contact
 

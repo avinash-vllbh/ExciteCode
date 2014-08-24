@@ -24,9 +24,11 @@ class CategoriesController < ApplicationController
   def edit
 
   end
-  def destroy
 
-  end
+  # Don't want to destroy anything
+  # def destroy
+
+  # end
 
   private
   def category_params
