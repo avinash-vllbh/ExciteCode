@@ -1,13 +1,21 @@
-<div id="fullpage">
-  <div class="section" id="frontPage">
-    <div class = "container">
-      <h1>Avinash Vallabhaneni</h1>
-      <h3>Full-stack web developer. MS in CSE @ ASU
-    </div>
+<div class="section" id="introPage">
+  <div class = "container">
+    <h1>Avinash Vallabhaneni</h1>
+    <h3>Full-stack web developer. MS in CSE @ ASU
   </div>
-  <div class="section" id="secondPage">
-    <div class = "container">
-      Some section2
-    </div>
+</div>
+<div class="section" id="projects">
+  <div class = "container">
+    <h3>Open Source Projects</h3>
+    <% @projects.each do |project| %>
+      <div class="project-container">
+        <h4><%= project.title %></h4>
+        <p><%= project.description %></p>
+        <div class="actions">
+          <%= link_to "View Demo", project_path(project.slug), class: "btn btn-danger btn-sm demo" %>
+          <a href="#" class="btn btn-default btn-sm"><i class="fa fa-github" style = "vertical-align: middle;"></i>&nbsp;View on Github</a>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ExciteCode</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="main-wrapper">
+      <header class="navbar navbar-default navbar-fixed-top" id="site-header" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <%= link_to root_path do %>
+              <span class = "site-logo"><strong>ExciteCode</strong></span>
+            <% end %>
+            <!-- <a href="../" class="navbar-brand">ExciteCode</a> -->
+          </div>
+          <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Open Source&nbsp;</a>
+              </li>
+              <li>
+                <%= link_to "Blog", blog_index_path %>
+              </li>
+              <li>
+                <%= link_to "Contact", contact_path %>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div id = "main-container" class = "container-fluid">
+        <%= yield %>
+      </div>
+    </div>
+    <footer id="site-footer">
+      <div class="container">
+        <div class = "row">
+          <div class = "col-md-4">
+            <span class = "title">About Me</span>
+            <p>
+              B.E, M.S, passionate about developing web applications and enriching user experience. 
+              Strong orientation towards Agile and Test Driven Development (TDD).
+            </p>
+          </div>
+          <div class = "col-md-4">
+          </div>
+          <div class = "col-md-4">
+            <span class = "title">Stay Connected</span>
+            <ul class="social-links">
+
+              <li class="github"><a href="https://github.com/avinash-vllbh", target = blank >GitHub</a></li>
+              <li class="twitter"><a href="https://twitter.com/avinash_vllbh", target = blank >Twitter</a></li>
+              <li class="facebook"><a href="https://www.facebook.com/avinash.vallabhaneni", target = blank>Facebook</a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/pub/avinash-vallabhaneni/55/979/a19", target = blank>LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer id = "footer-bottom">
+      <div class = "container-fluid">
+        <div class = "row">
+          ExciteCode.com&#169;2014
+        </div>
+      </div>
+  </body>
+</html>

@@ -1,3 +1,40 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.section {
+  min-height: 100%;
+  position:relative;
+}
+#projects {
+  text-align: center;
+}
+.project-container {
+  float: left;
+  display: block;
+  margin-right: 2.5%;
+  margin-top:3%;
+  width: 30%;
+  border-radius: 0.3125em;
+  border: 1px solid gainsboro;
+  display: inline-block;
+  min-height: 16.25em;
+  position: relative;
+  text-align: center;
+}
+.project-container p {
+  line-height: 1.5em;
+  padding: 1.25em;
+}
+.project-container .actions {
+  position: absolute;
+  bottom: -1em;
+  left: 15%;
+}
+
+.demo {
+  min-width: 110px;
+}
+.project-container .actions > a{
+  margin-right: 15px;
+}

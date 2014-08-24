@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
-  # layout "landing"
+  layout "landing"
   def index
+    @projects = Project.all
   end
 end
