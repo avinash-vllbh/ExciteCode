@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
   
   def create
     @project = Project.new(project_params)
+    @project.github = nil if @project.github.empty?
     if @project.save
       redirect_to project_path(@project.slug)
     else 
@@ -33,6 +34,6 @@ class ProjectsController < ApplicationController
  
   private
     def project_params
-      params.require(:project).permit(:title, :description, :language)
+      params.require(:project).permit(:title, :description, :language, :github)
     end
 end
