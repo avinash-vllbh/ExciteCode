@@ -206,14 +206,14 @@ pre {
 }
 
 .social-links li.github a {
-background-image: url(/assets/icon-github.png);
+background-image: image-url("icon-github.png");
 background-position: 0 0px;
 height: 20px;
 width: 20px;
 }
 
 .social-links li.github a:hover {
-background-image: url(/assets/icon-github-red.png);
+background-image: image-url("icon-github-red.png");
 -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -226,19 +226,19 @@ width: 20px;
 
 
 .social-links li.twitter a {
-background-image: url(/assets/icon-twitter.png);
+background-image: image-url("icon-twitter.png");
 background-position: 0 -15px;
 height: 15px;
 width: 21px;
 }
 .social-links li.facebook a {
-background-image: url(/assets/icon-facebook.png);
+background-image: image-url("icon-facebook.png");
 background-position: 0 -16px;
 height: 15px;
 width: 21px;
 }
 .social-links li.linkedin a {
-background-image: url(/assets/icon-linkedin.png);
+background-image: image-url("icon-linkedin.png");
 background-position: 0 -16px;
 height: 15px;
 width: 21px;
