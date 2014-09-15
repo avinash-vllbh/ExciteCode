@@ -40,6 +40,8 @@ gem 'unicorn'
 
 gem 'devise'
 gem 'omniauth-github'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 gem 'cancan'
 gem 'pg'
 gem 'cpalette'

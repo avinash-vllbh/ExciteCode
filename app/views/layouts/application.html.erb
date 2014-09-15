@@ -60,6 +60,12 @@
                 <%= link_to(user_omniauth_authorize_path(:github), :class => "btn btn-default") do %>
                   <i class="fa fa-github fa-2x" style = "vertical-align: middle;"></i>&nbsp;Sign in with github
                 <% end %>
+                <%= link_to(user_omniauth_authorize_path(:twitter), :class => "btn btn-default") do %>
+                  <i class="fa fa-twitter fa-2x" style = "vertical-align: middle;"></i>&nbsp;Sign in with twitter
+                <% end %>
+                <%= link_to(user_omniauth_authorize_path(:facebook), :class => "btn btn-default") do %>
+                  <i class="fa fa-facebook fa-2x" style = "vertical-align: middle;"></i>&nbsp;Sign in with facebook
+                <% end %>
               <% end %>
             </div>
             <div id = "side-bar">
