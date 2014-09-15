@@ -27,12 +27,12 @@ url('/assets/glyphicons-halflings-regular.ttf') format('truetype'),
 url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 
 font-family: 'FontAwesome';
-    src: url('fontawesome-webfont.eot');
-    src: url('fontawesome-webfont.eot?#iefix') format('embedded-opentype'), 
-         url('fontawesome-webfont.woff') format('woff'), 
-         url('fontawesome-webfont.ttf') format('truetype'), 
-         url('fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), 
-         url('fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+    src: url('/assets/fontawesome-webfont.eot');
+    src: url('/assets/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), 
+         url('/assets/fontawesome-webfont.woff') format('woff'), 
+         url('/assets/fontawesome-webfont.ttf') format('truetype'), 
+         url('/assets/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), 
+         url('/assets/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
 }
 
 html, body {
