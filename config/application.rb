@@ -24,5 +24,6 @@ module ExciteCode
 
     #To include bootstrap fonts in vendor/assets folder
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+    config.assets.precompile += %w(.svg .eot .woff .ttf)
   end
 end

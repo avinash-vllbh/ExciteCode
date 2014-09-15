@@ -7,7 +7,7 @@
 # Ignore bundler config.
 /.bundle
 # Ignoring lock file - dependencies could be environment specific
-./Gemfile.lock
+Gemfile.lock
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -21,6 +21,7 @@
 /config/database.yml
 config/database.yml
 config/secrets.yml
+config/initializers/devise.rb
 
 #Ignore assets folder
 public/assets
