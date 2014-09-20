@@ -16,6 +16,11 @@
 //= require bootstrap
 //= require highlight.pack
 //= require highlight.pack
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/excite_code
 //= require_tree .
 
 
@@ -66,13 +71,3 @@ $(document).ready(function() {
 });
 
 hljs.initHighlightingOnLoad();
-
-$(document).ready(function() {
-    $('#fullpage').fullpage({
-      resize : true,
-      sectionsColor : ['#333', '#fff'],
-      scrollingSpeed: 700,
-      menu: '#myMenu',
-      animateAnchor: true
-    });
-});

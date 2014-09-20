@@ -3,10 +3,13 @@ class BlogController < ApplicationController
   load_and_authorize_resource :find_by => :slug
   
   def index
-    # Check with ryan on the ambiguos colon issue
-    # @blogs = Blog.paginate(:page => params[:page], :per_page => 5).order('id DESC').eager_load(:category)
     @blogs = Blog.paginate(:page => params[:page], :per_page => 5).order('id DESC').includes(:comments)
     @categories = Category.all
+    # Respond to - HTML & JSON
+    respond_to do |format|
+      format.html 
+      format.json {render json: @blogs}
+    end
   end
   def new
     @blog = Blog.new
@@ -24,6 +27,11 @@ class BlogController < ApplicationController
   end
   def show
     @blog = Blog.find_by(slug: params[:id])
+    # Respond to - HTML & JSON
+    respond_to do |format|
+      format.html 
+      format.json {render json: @blogs}
+    end
   end
 
   private
