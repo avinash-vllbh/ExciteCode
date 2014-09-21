@@ -11,7 +11,9 @@ $(document).ready(function(){
   });
 
   // --------------Blogs collections-----------------------
-  var Blogs = Backbone.Collection.extend({});
+  var Blogs = Backbone.Collection.extend({
+    model : blog
+  });
   var blogs = new Blogs();
   blogs.url = '/blog/index.json';
   blogs.fetch({
