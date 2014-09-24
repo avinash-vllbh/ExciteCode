@@ -8,7 +8,7 @@ var Blog = Backbone.Model.extend({
 });
 
 
-// --------------Blogs collection-----------------------
-var Blogs = Backbone.Collection.extend({
-  model : blog
-});
+// // --------------Blogs collection-----------------------
+// var Blogs = Backbone.Collection.extend({
+//   model : blog
+// });

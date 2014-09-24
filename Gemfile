@@ -8,8 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'        # Use CoffeeScript for .js.coffee assets a
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 gem 'jquery-rails'                    # Use jquery as the JavaScript library
-gem 'rails-backbone'                  # Use backbone.js and install all its dependencies
-gem 'turbolinks'                      # Turbolinks makes following links in your web application faster
+gem 'eco'                             # Embedded coffeescript template engine for backbone
 gem 'jbuilder', '~> 2.0'              # Build JSON APIs with ease.
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc

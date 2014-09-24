@@ -1,29 +1,19 @@
 var BlogView = Backbone.View.extend({
-  tagName: 'div',
-  blogsTpl: _.template( $('#blogs-template').html() ),
-
-  // Called when the view is first created
   initialize: function() {
-    this.$el = $('.blogs');
+    this.blogs = this.options.blogs;
+    this.render();
   },
-
-  // Re-render the titles of the todo item.
   render: function() {
-    this.$el.html( this.blogsTpl( this.model.attributes ) );
-    this.input = this.$('.edit');
-    return this;
-  },
-
-  edit: function() {
-    // executed when todo label is double clicked
-  },
-
-  close: function() {
-    // executed when todo loses focus
-  },
-
-  updateOnEnter: function( e ) {
-    // executed on each keypress when in todo edit mode,
-    // but we'll wait for enter to get in action
-  }
+    if(this.blogs.length > 0) {
+      var out = "<h3><a href = '#new'>Create New</a></h3><ul>";
+      _(this.documents).each(function(item) {
+          out += "<li><a href='#blog/" + item.id + "'>" + item.escape('title') + "</a></li>";
+      });
+      out += "</ul>";
+      } else {
+        out = "<h3>No Blogs! <a href='#new'>Create one</a></h3>";
+      }
+      $(this.el).html(out);
+      $('#app').html(this.el);
+    }
 });

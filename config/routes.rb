@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :categories, param: :slug
 
   get '/blog' => 'blog#index'
+  get '/blog/index' => 'blog#index'
   post 'blog' => 'blog#create', as: 'create_blog'
 
   get '/contact' => 'contact#contact'

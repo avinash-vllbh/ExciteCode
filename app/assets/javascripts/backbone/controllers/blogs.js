@@ -1,7 +1,7 @@
-App.Controllers.Blogs = Backbone.Controller.extend({
+ExciteCode.Controllers.Blogs = Backbone.Controller.extend({
     routes: {
         "blog/:id":            "edit",
-        "":                    "index",
+        "":                    "",
         "new":                 "newBlog"
     },
     
@@ -9,7 +9,7 @@ App.Controllers.Blogs = Backbone.Controller.extend({
         var blog = new Blog({ id: id });
         blog.fetch({
             success: function(model, resp) {
-                new App.Views.Edit({ model: blog });
+                new ExciteCode.Views.Edit({ model: blog });
             },
             error: function() {
                 new Error({ message: 'Could not find that document.' });
@@ -22,7 +22,7 @@ App.Controllers.Blogs = Backbone.Controller.extend({
         $.getJSON('/blog', function(data) {
             if(data) {
                 var blogs = _(data).map(function(i) { return new Blog(i); });
-                new App.Views.Index({ blogs: blogs });
+                new ExciteCode.Views.Index({ blogs: blogs });
             } else {
                 new Error({ message: "Error loading blogs." });
             }
@@ -30,6 +30,6 @@ App.Controllers.Blogs = Backbone.Controller.extend({
     },
     
     newBlog: function() {
-        new App.Views.Edit({ model: new Blog() });
+        new ExciteCode.Views.Edit({ model: new Blog() });
     }
 });

@@ -11,43 +11,14 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
 //= require highlight.pack
-//= require highlight.pack
-//= require underscore
-//= require backbone
-//= require backbone_rails_sync
-//= require backbone_datalink
-//= require backbone/excite_code
-//= require_tree .
-
-
-// $(document).ready(function() {
-//   var header_height = $("#site-header").height();
-//   var padding_for_header = header_height + "px";
-//   $("#main-container").css({'padding-top': padding_for_header});
-//   console.log("Resetting padding!!!!");
-// });
-
-// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
-// $(document).ready(function() {
-//   var screen_width = $( window ).width();
-//   $(window).resize(function() {
-//     screen_width = $( window ).width();
-//   });
-//   $('#site-header ul.nav li.dropdown').hover(function() {
-//       if(screen_width > 768) {
-//         $(this).find('.dropdown-menu').stop(true, true).delay(80).slideDown();
-//       }
-//     }, function() {
-//       if(screen_width > 768) {
-//         $(this).find('.dropdown-menu').stop(true, true).delay(80).slideUp();
-//       }
-//     }
-//   );
-// });
+//= require lib/underscore
+//= require lib/backbone
+//= require lib/marionette
+//= require_tree ./backbone/config
+//= require backbone/app
+//= require_tree ./backbone/apps
 
 $(document).ready(function() {
   $("div.color").mouseenter(function() {
@@ -71,3 +42,14 @@ $(document).ready(function() {
 });
 
 hljs.initHighlightingOnLoad();
+
+// $(document).ready(function() {
+//   var App = {
+//       Views: {},
+//       Controllers: {},
+//       init: function() {
+//           new App.Controllers.Blogs();
+//           Backbone.history.start();
+//       }
+//   };
+// });
