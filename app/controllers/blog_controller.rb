@@ -1,15 +1,16 @@
 class BlogController < ApplicationController
   # authorize_resource
   load_and_authorize_resource :find_by => :slug
-  
+  respond_to :json
   def index
     @blogs = Blog.paginate(:page => params[:page], :per_page => 5).order('id DESC').includes(:comments)
-    @categories = Category.all
-    # Respond to - HTML & JSON
-    respond_to do |format|
-      format.html 
-      format.json {render json: @blogs}
-    end
+    respond_with @blogs
+    # @categories = Category.all
+    # # Respond to - HTML & JSON
+    # respond_to do |format|
+    #   format.html 
+    #   format.json {render json: @blogs}
+    # end
   end
   def new
     @blog = Blog.new

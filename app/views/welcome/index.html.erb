@@ -1,32 +1,9 @@
-<!-- <div class="section" id="introPage">
-  <div class = "container">
-    <h1>Avinash Vallabhaneni</h1>
-    <h3>Full-stack web developer. MS in CSE @ ASU
-  </div>
+<div id="wrap">
+  <div id="header-region"></div>
+  <div id="main-region"></div>
+  <div id="push"></div>
 </div>
-<div class="section" id="projects">
-  <div class = "container">
-    <h3>Open Source Projects</h3>
-    <% @projects.each do |project| %>
-      <div class="project-container">
-        <h4><%= project.title %></h4>
-        <p><%= project.description %></p>
-        <div class="actions">
-          <% unless project.github.nil? %>
-            <%= link_to "View Demo", project_path(project.slug), class: "btn btn-danger btn-sm demo" %>
-          <% end %>
-          <% unless project.github.nil? %>
-            <a href="#" class="btn btn-default btn-sm"><i class="fa fa-github" style = "vertical-align: middle;"></i>&nbsp;View on Github</a>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div> -->
-
-<div id="header-region"><div>
-<div id="main-region"><div>
-<div id="footer-region"><div>
+<div id="footer-region"></div>
 
 <%= javascript_tag do %>
   $(function() {

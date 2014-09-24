@@ -1,0 +1,16 @@
+<div id="header" class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="row">
+        <div class="pull-left">
+          <span class="brand">ExciteCode</span>
+        </div>
+        <ul class="nav pull-right">
+          <li><a href="#">Users</a><li>
+          <li><a href="#">Blog</a><li>
+          <li><a href="#">Contact</a><li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
