@@ -2,7 +2,7 @@
   
   App = new Marionette.Application
 
-  App.rootRoute = "blogs"
+  App.rootRoute = Routes.blog_index_path()
   
   App.addRegions
     headerRegion: "#header-region"
@@ -14,15 +14,9 @@
     App.module("HeaderApp").start()
     App.module("FooterApp").start()
 
-  App.on "initialize:after", ->
+  App.on "start", ->
     if Backbone.history
       Backbone.history.start()
-      @navigate(@rootRoute) if @getCurrentRoute() is ""
-      #Backbone.history.navigate "blogs" if Backbone.history.fragment is ""
+      @navigate(@rootRoute, trigger: true) if @getCurrentRoute() is ""
 
-  App.navigate = (route) ->
-    Backbone.history.navigate route
-
-  App.getCurrentRoute = ->
-    Backbone.history.fragment
   App

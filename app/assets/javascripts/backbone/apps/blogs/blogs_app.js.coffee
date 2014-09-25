@@ -2,11 +2,11 @@
 
   class BlogsApp.Router extends Marionette.AppRouter
     appRoutes:
-      "blogs" : "listBlogs"
+      "blog" : "listBlogs"
 
   API =
     listBlogs: ->
-      console.log "get blogs"
+      BlogsApp.List.Controller.listBlogs()
 
   App.addInitializer ->
     new BlogsApp.Router
