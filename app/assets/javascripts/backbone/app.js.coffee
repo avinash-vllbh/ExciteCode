@@ -1,6 +1,8 @@
 @Excitecode = do (Backbone, Marionette) ->
   
   App = new Marionette.Application
+
+  App.rootRoute = "blogs"
   
   App.addRegions
     headerRegion: "#header-region"
@@ -15,5 +17,12 @@
   App.on "initialize:after", ->
     if Backbone.history
       Backbone.history.start()
+      @navigate(@rootRoute) if @getCurrentRoute() is ""
+      #Backbone.history.navigate "blogs" if Backbone.history.fragment is ""
 
+  App.navigate = (route) ->
+    Backbone.history.navigate route
+
+  App.getCurrentRoute = ->
+    Backbone.history.fragment
   App

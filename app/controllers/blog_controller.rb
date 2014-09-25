@@ -28,11 +28,7 @@ class BlogController < ApplicationController
   end
   def show
     @blog = Blog.find_by(slug: params[:id])
-    # Respond to - HTML & JSON
-    respond_to do |format|
-      format.html 
-      format.json {render json: @blogs}
-    end
+    respond_with @blog
   end
 
   private
