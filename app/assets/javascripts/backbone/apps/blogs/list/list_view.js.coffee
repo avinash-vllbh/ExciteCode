@@ -2,3 +2,23 @@
 
   class List.Layout extends App.Views.Layout
     template: "blogs/list/templates/list_layout"
+
+    regions:
+      panelRegion: "#panel-region"
+      sidebarRegion: "#sidebar-region"
+
+  class List.Blog extends App.Views.ItemView
+    template: "blogs/list/templates/_blog"
+    tagName: 'div'
+    className: 'blog-post-section row'
+
+  class List.Panel extends App.Views.CompositeView
+    template: "blogs/list/templates/_panel"
+    childView: List.Blog
+    childViewContainer: "#blogs-collection"
+
+  class List.Sidebar extends App.Views.ItemView
+    template: "blogs/list/templates/_sidebar"
+
+    collectionEvents:
+      "reset" : "render"

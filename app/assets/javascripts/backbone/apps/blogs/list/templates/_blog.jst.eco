@@ -1,0 +1,12 @@
+  <div class = "col-md-1 blog-date-section">
+    <%= @created_at %>
+  </div>
+  <div class = "col-md-8 blog-content-section">
+    <div class = "blog-title-section">
+      <%= @title %>
+    </div>
+    <p><%= @body %></p>
+    <div class = "blog-closing-section">
+      Categories: <%= @category_id %> | keywords: <%= @keywords %>
+    </div>
+  </div>
