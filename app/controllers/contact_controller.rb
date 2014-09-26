@@ -9,15 +9,14 @@ class ContactController < ApplicationController
   def create_contact
     @contact = Contact.new(contact_parmas)
     if @contact.save
-      flash[:notice] = "Thank you... will get back as soon as I can"
-      redirect_to root_path
+      render json: nil, status: 200
+      # flash[:notice] = "Thank you... will get back soon"
+      # redirect_to root_path
     else
-      flash[:alert] = "failed"
-      render "contact"
+      render :json => {:errors => @contact.errors.messages}, :status => 422
     end
   end
 
-  
   private
   def contact_parmas
     params.require(:contact).permit(:name, :email, :message)

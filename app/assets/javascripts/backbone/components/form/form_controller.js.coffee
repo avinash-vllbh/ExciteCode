@@ -10,6 +10,10 @@
       @listenTo @formLayout, "show", @formContentRegion
       @listenTo @formLayout, "destroy", @destroy
       @listenTo @formLayout, "form:submit", @formSubmit
+      @listenTo @formLayout, "form:cancel", @formCancel
+
+    formCancel: ->
+      @contentView.triggerMethod "form:cancel"
       
     onDestroy: ->
       console.log "onClose"
@@ -36,6 +40,8 @@
       _.defaults config,
         footer: true
         focusFirstInput: true
+        errors: true
+        syncing: true
         buttons: @getDefaultButtons config.buttons
 
     getDefaultButtons: (buttons = {}) ->

@@ -8,3 +8,4 @@
 
   class New.Contact extends App.Views.ItemView
     template: "contact/new/templates/contact_form"
+  
