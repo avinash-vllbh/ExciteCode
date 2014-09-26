@@ -12,6 +12,5 @@
       blogs.fetch()
       blogs
 
-
   App.reqres.setHandler "blog:entities", ->
     API.getBlogEntities()

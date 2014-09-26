@@ -17,11 +17,18 @@
 //= require lib/backbone
 //= require lib/marionette
 //= require js-routes
+//= require_tree ./vendor
 //= require_tree ./backbone/config
 //= require backbone/app
-//= require_tree ./backbone/entities
 //= require_tree ./backbone/views
+//= require_tree ./backbone/entities
+//= require_tree ./backbone/components
 //= require_tree ./backbone/apps
+
+$(document).ajaxSend(function (e, xhr, options) {
+  var token = $("meta[name='csrf-token']").attr("content");
+  xhr.setRequestHeader("X-CSRF-Token", token);
+});
 
 $(document).ready(function() {
   $("div.color").mouseenter(function() {
@@ -45,14 +52,3 @@ $(document).ready(function() {
 });
 
 hljs.initHighlightingOnLoad();
-
-// $(document).ready(function() {
-//   var App = {
-//       Views: {},
-//       Controllers: {},
-//       init: function() {
-//           new App.Controllers.Blogs();
-//           Backbone.history.start();
-//       }
-//   };
-// });

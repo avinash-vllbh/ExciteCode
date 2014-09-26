@@ -1,7 +1,11 @@
 class ContactController < ApplicationController
+  
+  respond_to :json
+
   def contact
     @contact = Contact.new
   end
+  
   def create_contact
     @contact = Contact.new(contact_parmas)
     if @contact.save

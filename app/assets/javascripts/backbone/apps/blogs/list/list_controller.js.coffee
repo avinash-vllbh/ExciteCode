@@ -7,10 +7,10 @@
       window.blogs = blogs
       
       @layout = @getLayoutView()
-
+      
       @layout.on "show", =>
         @showPanel blogs
-        @showSidebar blogs
+        # @showSidebar blogs
 
       App.mainRegion.show @layout
 

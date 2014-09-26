@@ -7,6 +7,9 @@
       panelRegion: "#panel-region"
       sidebarRegion: "#sidebar-region"
 
+  class List.Empty extends App.Views.ItemView
+    template: "blogs/list/templates/_empty"
+
   class List.Blog extends App.Views.ItemView
     template: "blogs/list/templates/_blog"
     tagName: 'div'
