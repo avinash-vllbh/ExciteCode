@@ -6,7 +6,11 @@ body {
   line-height: 1.8em;
 }
 
-#wrap         {  height: auto !important; margin: 0 auto -247px; min-height: 100%;  }
+#wrap {  
+  height: 100%;
+  margin: 0 auto -247px;
+  min-height: 100%;
+}
 
 h2 {
   color: #d32626;
@@ -65,9 +69,10 @@ pre {
 /*Main Container*/
 
 #main-region {
-  overflow: auto;
-  padding-top: 120px;
-  padding-bottom: 61px;
+  height: 100%;
+  // overflow: auto;
+  // padding-top: 120px;
+  // padding-bottom: 61px;
 }
 #main-container > a {
   color: #d32626;

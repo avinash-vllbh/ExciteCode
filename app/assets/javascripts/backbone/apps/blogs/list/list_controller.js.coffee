@@ -4,7 +4,6 @@
 
     listBlogs: ->
       blogs = App.request "blog:entities"
-      window.blogs = blogs
       
       @layout = @getLayoutView()
       
