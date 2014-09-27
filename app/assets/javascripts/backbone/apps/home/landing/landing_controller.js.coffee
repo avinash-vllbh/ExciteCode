@@ -3,12 +3,13 @@
   class Landing.Controller extends Marionette.Controller
 
     initialize: ->
+      projects = App.request "projects:entities"
       @layout = @getLayoutView()
 
       # On layout show event, we should show all the three regions in it
       @layout.on "show", =>
         @showIntro()
-        @showProjects()
+        @showProjects projects
         @showAbout()
 
       App.mainRegion.show @layout
@@ -17,8 +18,8 @@
       introView = new Landing.Intro
       @layout.introRegion.show introView
 
-    showProjects: ->
-      projectsView = @getProjectsList()
+    showProjects: (projects)->
+      projectsView = @getProjectsList projects
       @layout.projectsRegion.show projectsView
 
     showAbout: ->
@@ -31,7 +32,7 @@
     getLayoutView: ->
       new Landing.Layout
 
-    getProjectsList: ->
-      projects = App.request "projects:entities"
+    getProjectsList: (projects) ->
       new Landing.Projects
+        # collection: new Backbone.Collection(projects.first(3))
         collection: projects
