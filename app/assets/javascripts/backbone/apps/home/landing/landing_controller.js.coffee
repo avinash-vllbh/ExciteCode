@@ -5,12 +5,13 @@
     initialize: ->
       projects = App.request "projects:entities"
       @layout = @getLayoutView()
-
       # On layout show event, we should show all the three regions in it
       @layout.on "show", =>
         @showIntro()
         @showProjects projects
         @showAbout()
+        # To set the width of intro region to 100%
+        resizeDiv()
 
       App.mainRegion.show @layout
 
@@ -34,5 +35,4 @@
 
     getProjectsList: (projects) ->
       new Landing.Projects
-        # collection: new Backbone.Collection(projects.first(3))
         collection: projects

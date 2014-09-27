@@ -9,6 +9,7 @@
     getHeaders: ->
       new Entities.HeaderCollection [
         { name: "Projects", url: Routes.projects_path() }
+        { name: "About", url: Routes.blog_index_path() }
         { name: "Blog", url: Routes.blog_index_path() }
         { name: "Contact", url: Routes.contact_path() }
       ]

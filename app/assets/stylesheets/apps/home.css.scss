@@ -1,11 +1,10 @@
 #main-region {
-  height: 100%;
+  overflow: auto;
 }
 .main-wrapper {
   height: 100%;
 }
 #intro-region {
-  height    : 100%;
   width     : 100%;
   display   : table;
   background: -webkit-linear-gradient(90deg, #485563 10%, #29323c 90%); /* Chrome 10+, Saf5.1+ */
@@ -22,7 +21,6 @@
     margin-bottom: 30px;
   }
 }
-
 .intro-text {
   font-size: 25px;
   color: #fff;
@@ -30,7 +28,6 @@
     color: #fff;
   }
 }
-
 .content-section {
   padding-top: 200px;
 }

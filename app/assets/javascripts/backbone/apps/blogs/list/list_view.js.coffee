@@ -23,6 +23,7 @@
 
   class List.Sidebar extends App.Views.ItemView
     template: "blogs/list/templates/_sidebar"
-
+    
+    # To update the sidebar section in model's are changed
     collectionEvents:
       "reset" : "render"

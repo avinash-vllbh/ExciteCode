@@ -1,0 +1,6 @@
+<h4><%= @title %></h4>
+<p><%= @description %></p>
+<div class="actions">
+  <button class="btn btn-danger btn-sm demo">View Demo</button>
+  <button class="btn btn-danger btn-sm demo">View on Github</button>
+</div>

@@ -1,7 +1,3 @@
-#projects {
-  text-align: center;
-}
-
 .project-container {
   float: left;
   display: block;
@@ -20,16 +16,14 @@
     position: absolute;
     bottom: -1em;
     left: 15%;
+    :nth-child(2) {
+      margin-left: 10px;
+    }
+    .demo {
+      min-width: 6%;
+    }
   }
   > a {
     margin-right: 15px;
   }
 }
-
-.demo {
-  min-width: 6%;
-}
-
-// .project-container .actions > a {
-//   margin-right: 15px;
-// }

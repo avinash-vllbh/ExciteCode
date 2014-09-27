@@ -8,8 +8,7 @@ body {
 
 #wrap {  
   height: 100%;
-  // margin: 0 auto -247px;
-  min-height: 100%;
+  margin: 0 auto -247px;
 }
 
 h2 {
@@ -66,14 +65,6 @@ pre {
   }
 }
 
-/*Main Container*/
-
-#main-region {
-  height: 100%;
-  // overflow: auto;
-  // padding-top: 120px;
-  // padding-bottom: 61px;
-}
 #main-container > a {
   color: #d32626;
 }

@@ -30,14 +30,27 @@ $(document).ajaxSend(function (e, xhr, options) {
   xhr.setRequestHeader("X-CSRF-Token", token);
 });
 
+/* Make the view port height as the height of intro-region */
+$(document).ready(function() {
+  resizeDiv();
+});
+
+window.onresize = function(event) {
+  resizeDiv();
+}
+
+function resizeDiv() {
+  vph = $(window).height();
+  $('#intro-region').css("height", vph);
+}
+
+
 $(document).ready(function() {
   $("div.color").mouseenter(function() {
     var id = $(this).attr('id').slice(-1);
     console.log(id);
     $("#paletteInfo"+id).show("slow").css("display", "inline-block");
     $("#palette"+id).hide("slow");
-    // $("#palette"+id).css("display", "none");
-    // $("#paletteInfo"+id).css("display", "inline-block");
   });
 });
 
@@ -46,8 +59,6 @@ $(document).ready(function() {
     var id = $(this).attr('id').slice(-1);
     $("#palette"+id).show("slow").css("display", "inline-block");
     $("#paletteInfo"+id).hide("slow");
-    // $("#paletteInfo"+id).css("display", "none");
-    // $("#palette"+id).css("display", "inline-block");
   });
 });
 

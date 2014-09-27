@@ -8,4 +8,4 @@
 
   # Show footer on starting FooterApp module
   FooterApp.on "start", ->
-    # API.showFooter()
+    API.showFooter()
