@@ -12,9 +12,17 @@
 
   class Landing.Intro extends App.Views.ItemView
     template: "home/landing/templates/intro"
+    className: "intro-body"
 
-  class Landing.Projects extends App.Views.ItemView
-    template: "home/landing/templates/projects"  
+  class Landing.Project extends App.Views.ItemView
+    template: "home/landing/templates/_project"
+    className: "project-container col-md-3 col-md-offset-1"
+
+  class Landing.Projects extends App.Views.CompositeView
+    template: "home/landing/templates/projects"
+
+    childView: Landing.Project
+    childViewContainer: ".projects-container"
 
   class Landing.About extends App.Views.ItemView
     template: "home/landing/templates/about"  

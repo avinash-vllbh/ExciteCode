@@ -3,7 +3,6 @@
   class New.Controller extends Marionette.Controller
 
     initialize: ->
-      window.c = @
       contact = App.request "new:contact:entity"
 
       @listenTo contact, "created", ->

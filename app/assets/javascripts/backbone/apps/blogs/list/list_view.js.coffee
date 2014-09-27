@@ -2,6 +2,7 @@
 
   class List.Layout extends App.Views.Layout
     template: "blogs/list/templates/list_layout"
+    className: "container blog-section"
 
     regions:
       panelRegion: "#panel-region"

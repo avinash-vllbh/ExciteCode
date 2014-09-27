@@ -18,7 +18,7 @@
       @layout.introRegion.show introView
 
     showProjects: ->
-      projectsView = new Landing.Projects
+      projectsView = @getProjectsList()
       @layout.projectsRegion.show projectsView
 
     showAbout: ->
@@ -30,3 +30,8 @@
 
     getLayoutView: ->
       new Landing.Layout
+
+    getProjectsList: ->
+      projects = App.request "projects:entities"
+      new Landing.Projects
+        collection: projects

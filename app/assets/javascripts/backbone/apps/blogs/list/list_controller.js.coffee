@@ -9,7 +9,7 @@
       
       @layout.on "show", =>
         @showPanel blogs
-        # @showSidebar blogs
+        @showSidebar blogs
 
       App.mainRegion.show @layout
 
@@ -21,9 +21,9 @@
       sidebarView = @getSidebarView blogs
       @layout.sidebarRegion.show sidebarView
 
-    getSidebarView: (blogs) ->
+    getSidebarView: (blogs)->
       new List.Sidebar
-      collection: blogs
+        collection: blogs
 
     getPanelView: (blogs) ->
       new List.Panel

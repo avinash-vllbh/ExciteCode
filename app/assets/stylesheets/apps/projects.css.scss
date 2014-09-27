@@ -1,0 +1,35 @@
+#projects {
+  text-align: center;
+}
+
+.project-container {
+  float: left;
+  display: block;
+  margin-top: 6%;
+  border-radius: 0.3125em;
+  border: 1px solid gainsboro;
+  display: inline-block;
+  min-height: 16.25em;
+  position: relative;
+  text-align: center;
+  p {
+    line-height: 1.5em;
+    padding: 1.25em;
+  }
+  .actions {
+    position: absolute;
+    bottom: -1em;
+    left: 15%;
+  }
+  > a {
+    margin-right: 15px;
+  }
+}
+
+.demo {
+  min-width: 6%;
+}
+
+// .project-container .actions > a {
+//   margin-right: 15px;
+// }

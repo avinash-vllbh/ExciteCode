@@ -1,7 +1,9 @@
 class ProjectsController < ApplicationController
   # load_and_authorize_resource :find_by => :slug
+  respond_to :json
   def index
     @projects = Project.all
+    respond_with @projects
   end
   
   def new
