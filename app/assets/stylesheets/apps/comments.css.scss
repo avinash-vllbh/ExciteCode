@@ -1,0 +1,49 @@
+
+.comment-wrapper {
+  border-bottom: solid 1px #DDD;
+  margin-bottom: 20px;
+}
+
+.comment-post-date {
+  float: right;
+  font-size: 0.9em;
+  color: #666;
+  padding-bottom: 10px;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.comment-wrapper {
+  .delete {
+    background-image: url(/assets/icon-delete.png);
+    height: 25px;
+    width: 25px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    &:hover {
+      background-image: url(/assets/icon-delete-red.png);
+      height: 25px;
+      width: 25px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  .title {
+    color: #d32626;
+    display: inline-block;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0 0 12px;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #4b4b4b;
+  }
+}
