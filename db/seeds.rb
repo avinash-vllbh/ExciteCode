@@ -1,7 +1,42 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# User.create!([
+#   {email: "avallab1@asu.edu", encrypted_password: "$2a$10$nCnulXOS.cHtLc1wFgyGl.lbPuj0cTB7lV37wQT24j4i0LljlbD1.", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2014-07-28 03:27:45", last_sign_in_at: "2014-07-28 03:27:45", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false, provider: nil, uid: nil, name: nil},
+#   {email: "avinash.vllbh123@gmail.com", encrypted_password: "$2a$10$GcxjE91KPeTv0S9hoVeuEeoLowSQEOUgHi3uDsybDLejRebsvFExW", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 8, current_sign_in_at: "2014-08-17 13:43:14", last_sign_in_at: "2014-08-16 21:25:25", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: true, provider: nil, uid: nil, name: nil},
+#   {email: "avinash.vllbh@gmail.com", encrypted_password: "$2a$10$H5v4JECW84FsKbsdsvSGEORYtGAAeH5hWA6Q6LgTP5OK8ym3LqY2.", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 11, current_sign_in_at: "2014-09-15 22:19:38", last_sign_in_at: "2014-08-17 15:44:53", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", admin: false, provider: "github", uid: "3880793", name: "Avinash Vallabhaneni"}
+# ])
+Blog.create!([
+  {title: "Adding slugs for urls", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", keywords: "rails", comments: 0, category_id: 1, slug: "adding-slugs-for-urls"},
+  {title: "test2 rails slugs", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", keywords: "rails", comments: 0, category_id: 1, slug: "test2-rails-slugs"},
+  {title: "test3 rails slugs", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", keywords: "rails", comments: 0, category_id: 1, slug: "test3-rails-slugs"},
+  {title: "test4 rails slugs", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", keywords: "rails", comments: 0, category_id: 1, slug: "test4-rails-slugs"},
+  {title: "New Dev Blog", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum", keywords: "sublime", comments: 0, category_id: 2, slug: "new-dev-blog"},
+  {title: "Testing custom routes prefixes", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", keywords: "rails, routing", comments: 0, category_id: 1, slug: "testing-custom-routes-prefixes"},
+  {title: "Testing custom routes prefixes1", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", keywords: "rails, routing", comments: 0, category_id: 1, slug: "testing-custom-routes-prefixes1"},
+  {title: "Testing custom routes prefixes2", body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", keywords: "rails, routing", comments: 0, category_id: 1, slug: "testing-custom-routes-prefixes2"}
+])
+Category.create!([
+  {name: "Testing Rails", slug: "testing-rails"},
+  {name: "Testing Dev Tools", slug: "testing-dev-tools"},
+  {name: "Developer Tools", slug: "developer-tools"}
+])
+Comment.create!([
+  {blog_id: 8, body: "Testing comments", posted_by: "", user_id: nil},
+  {blog_id: 8, body: "Heloo comments", posted_by: nil, user_id: 3},
+  {blog_id: 8, body: "Testinggg stufff", posted_by: nil, user_id: 3}
+])
+Contact.create!([
+  {name: "Avinash", email: "test@test.com", message: "Hello"},
+  {name: "OmniAuth-Test1989", email: "avinash.vllbh@gmail.com", message: "asdasdasd"},
+  {name: "Avinash", email: "avi@avi.com", message: "testingggg"},
+  {name: "Avinash", email: "avi@avi.com", message: "testingggg"},
+  {name: "Avinash", email: "avi@avi.com", message: "testingggg"},
+  {name: "Avinash", email: "avi@avi.com", message: "testingggg"},
+  {name: "OmniAuth-Test1989", email: "avinash.vllbh@gmail.com", message: "asdasdasd"},
+  {name: "asd", email: "avinash.vllbh@gmail.com", message: "asdad"}
+])
+Project.create!([
+  {title: "test", description: "testingggg", language: "ruby", slug: "test", github: nil},
+  {title: "testing rails", description: "heloo how are youuu", language: "ruby", slug: "testing-rails", github: nil},
+  {title: "testing rails1", description: "heloo how are youuu", language: "ruby", slug: "testing-rails1", github: nil},
+  {title: "testing rails2", description: "heloo how are youuu", language: "ruby", slug: "testing-rails2", github: nil},
+  {title: "testing rails3", description: "heloo how are youuu", language: "ruby", slug: "testing-rails3", github: nil}
+])

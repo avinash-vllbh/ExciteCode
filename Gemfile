@@ -32,6 +32,7 @@ group :development do
   gem 'bullet'                        # Gives a performance analysis on queries made
   gem 'rails_best_practices'
   gem 'rails-footnotes'
+  gem 'seed_dump'                     # To dump the current database data to db/seeds.rb file
 end
 group :development, :test do
   gem 'rspec-rails'
