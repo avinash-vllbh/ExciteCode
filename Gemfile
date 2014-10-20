@@ -48,8 +48,11 @@ group :test do
   gem "capybara-webkit"
   gem "capybara-screenshot"
 end
+
 group :production do
   gem 'unicorn' # Use unicorn as the app server in production
-  # gem 'capistrano-rails', group: :development  # Use Capistrano for deployment
+  gem 'capistrano', '~> 3.2'
+  gem 'capistrano-rails', '~> 1.1.0'      # rails specific capistrano functions
+  gem 'capistrano-bundler'                # integrate bundler with capistrano
+  gem 'capistrano-rbenv', "~> 2.0"        # Using Rbenv on production
 end
-
